@@ -12,5 +12,12 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
-}
+  let titles = []
+  tutorials.forEach((w) => {
+    let wrd = (w.split(" "))
+    let tutorials1 = wrd.map(word => (word = word[0].toUpperCase() + word.substring(1)))
+    let tutorials2 = tutorials1.join(' ')
+    titles.push(tutorials2)
+  })
+  return titles
+} 
