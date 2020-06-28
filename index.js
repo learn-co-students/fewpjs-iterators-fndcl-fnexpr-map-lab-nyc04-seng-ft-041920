@@ -12,5 +12,6 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map(tutorial => tutorial.split(' ').map(word => word.charAt(0).toUpperCase() + word.substr(1)).join(' '))
+  // .forEach returned undefined all those times, but that second map... moment of self doubt here if this was the right approach?
 }
